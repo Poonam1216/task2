@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation (adding functionality to HTML elements)
+    </title>
+</head>
+<body>
+    <div id="rectangle">
+        <div id="box"></div>
+    </div>
+
+
+    <div>
+    <button id="change_color" onclick="changeColor(); ifColor()">Change color</button>
+    <button onclick="addChild()">Add child</button>
+    <button id="removeChild" onclick="removeChild()">Remove child</button>
+
+</div>
+    <script>
+        const change_color = document.getElementById('change_color');
+        change_color.addEventListener('click', function onclick(event){
+            const rectangle = document.getElementById('rectangle');
+            rectangle.style.background ="red";
+      
+  })
+
+      function addChild(){
+        const box = document.createElement('box');
+        box.style.width = "100px";
+        box.style.height = "100px";
+        box.style.background ="pink";
+        box.style.border = "2px solid black"
+        document.querySelector('div').appendChild(box);
+      }
+
+      removeChild.addEventListener('click', function(){
+        rectangle.removeChild(rectangle.lastChild);
+      })
+     
+
+
+    </script>
+</body>
+</html>
